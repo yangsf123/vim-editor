@@ -1,0 +1,20 @@
+技巧5 查找并手动替换
+
+Vim提供了一个:substitute命令专门用于查找替换任务，不过用上面介绍的技术，我们也可以手动修改第一处地方，然后再一个个地查找替换其他匹配项。.命令可以把我们从繁重的工作中解放出来，而即将登场的另一个有用的单键命令，则能够让我们方便地在匹配项间跳转。
+
+在下面这段文本中，每一行都出现单词"content":
+...We're waiting for content before the side can go live...
+...If you are content with this,let's go ahead with it...
+...We'll launch as soon as we have the copy...
+
+:%s/content/copy/g          替换文本中所有content为copy
+问题：某些位置的content是不想修改的...
+
+
+偷懒的办法：无需输入就可以进行查找
+/content命令查找然后使用*命令(跳到下一个content)
+cwcopy<Esc>删除下一个单词退到普通模式
+
+
+使修改可重复
+Vim会把我们离开插入模式之前的全部按键操作都记录下来,cwcopy<Esc>会被当成一个修改

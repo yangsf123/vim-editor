@@ -1,0 +1,9 @@
+技巧10 用次数做简单的算术运算
+
+
+大多数普通模式命令可以在执行时指定次数，我们可以利用这个功能来做简单的算术运算。
+
+
+.blog, .news { background-image: url(/sprite.png); }
+.blog { background-position: 0px 0px }
+.news { background-position: -180px 0px }

@@ -1,0 +1,13 @@
+技巧19 用替换模式替换已有文本
+
+在替换模式中输入会替换文档中的已有文本，除此之外，该模式与插入模式完全相同
+
+
+假设有如下一段文本：
+Typing in Insert mode extends the line, but in Replace mode
+the line length doesn't change.
+
+f.          找到.
+R, b<Esc>   R命令可以由普通模式进入替换模式，然后就如例中所示，输入", b"替换原有的". B"字符。完成替换按<Esc>退出
+
+

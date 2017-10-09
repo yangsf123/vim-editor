@@ -1,0 +1,17 @@
+ 技巧22 重复执行面向行的可视命令
+
+
+ 当使用.命令重复对高亮选区所做的修改时，此修改会重复作用于相同范围的文本。
+
+
+     def fib(n):
+         a,b = 0, 1
+         while a < n:
+             print a,
+             a, b = b, a+b
+
+    fib(42)
+
+准备工作
+要想使<和>命令正常工作，我们需要把'shiftwidth'及'softtabstop'的值设置为4，并启用'expandtab'选项
+:set sw=4 sts=4 expandtab

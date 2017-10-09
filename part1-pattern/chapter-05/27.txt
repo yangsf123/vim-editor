@@ -1,0 +1,26 @@
+技巧27  结束Vim的命令行模式
+
+
+命令行模式会提示我们输入一条Ex命令，一个查找模式，或一个表达式。
+
+按下:键时，Vim会切换到命令行模式。这个模式和shell下的命令行有些类似，我们可以输入一条命令，然后按<CR>执行它。在任意时刻，我们都可以按<Esc>键从命令行模式切换回普通模式
+
+
+
+命令                                          用途
+:[range]delete [x]                              删除指定范围内的行[到寄存器x中]
+:[range]yank [x]                                复制指定范围的行[到寄存器x中]
+:[line]put [x]                                  在指定行后粘贴寄存器x中的内容
+:[range]copy {address}                          把指定范围内的行拷贝到{address}所指定的行之下
+:[range]move {address}                          把指定范围内的行移动到{address}所指定的行之下
+:[range]join                                    连接指定范围内的行
+:[range]normal {commands}                       对指定范围内的每一行执行普通模式命令{commands}
+:[range]substitute/{pattern}/{strinh}/[flags]   把指定范围内出现{pattern}的地方替换为{string}
+:[range]global/{pattern}/[cmd]                  对指定范围内匹配{pattern}的所有行，在其上执行Ex命令{cmd}
+
+
+
+
+Vim命令行模式中的特殊按键
+
+Ex命令影响范围广且距离远：Ex命令操作范围更大，并且能够在一次执行中修改多行

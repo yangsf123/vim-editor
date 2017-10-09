@@ -1,0 +1,20 @@
+技巧25  修改列文本
+
+用列块可视模式可以同时往若干行中插入文本。列块可视模式不仅仅对表格数据有用，在编程时我们也时常受惠于此功能
+
+
+例如，对于一下CSS片段：
+li.one   a{ background-image: url('/components/sprite.png'); }
+li.two   a{ background-image: url('/components/sprite.png'); }
+li.three a{ background-image: url('/components/sprite.png'); }
+
+假设我们已经把sprite.png从images/目录移到了components/目录，那么就需要修改每一行的内容，使其指向该文件的新位置。
+
+
+命令                用途
+<C-v>jje            进入列块模式，移动光标选中images
+c                   删除images
+componets           输入components
+<Esc>               退出（剩余两行会自动补全components）
+
+因为在插入模式的时间很短，退出之后会显示所有行的components
